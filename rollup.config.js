@@ -29,7 +29,7 @@ export default [
             typescript({ tsconfig: "./tsconfig.json" }),
             terser(),
         ],
-        external: ["react", "react-dom", "styled-components", "@chakra-ui/icons", "@chakra-ui/react", "@emotion/react", "@emotion/styled"]
+        external: ["react", "react-dom", "styled-components", "@chakra-ui/react", "@emotion/react", "@emotion/styled"]
     },
     {
         input: "dist/esm/types/index.d.ts",
