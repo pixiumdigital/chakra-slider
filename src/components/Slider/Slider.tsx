@@ -55,7 +55,7 @@ const Slider = ({
         return <></>
     }
     return (
-        <Box minWidth={minWidth} minHeight={minHeight} maxHeight={maxHeight} maxWidth={maxWidth} backgroundColor={backgroundColor} borderRadius={"10px"}>
+        <Grid minWidth={minWidth} minHeight={minHeight} maxHeight={maxHeight} maxWidth={maxWidth} backgroundColor={backgroundColor} borderRadius={"10px"}>
             <Grid minHeight={"100%"} height={"100%"}>
                 {hide &&
                     <Box alignSelf={"flex-start"} justifySelf="flex-end" m={"0 10px"} >
@@ -123,7 +123,7 @@ const Slider = ({
                     </Button>
                 </Flex>
             </Grid>
-        </Box>
+        </Grid>
     )
 };
 
