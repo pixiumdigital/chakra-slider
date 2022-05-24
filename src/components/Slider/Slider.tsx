@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Progress, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Progress, Text, VStack } from "@chakra-ui/react";
 import { ChevronRightIcon, ChevronLeftIcon, CloseIcon } from "@chakra-ui/icons";
 import React, { useEffect, useState } from "react";
 
@@ -56,23 +56,22 @@ const Slider = ({
     }
     return (
         <Box minWidth={minWidth} minHeight={minHeight} maxHeight={maxHeight} maxWidth={maxWidth} backgroundColor={backgroundColor} borderRadius={"10px"}>
-            <Flex minHeight={"100%"} height={"100%"} direction={"column"}>
+            <Grid minHeight={"100%"} height={"100%"}>
                 {hide &&
-                    <Box alignSelf={"flex-end"} m={"0 10px"}>
+                    <Box alignSelf={"flex-start"} justifySelf="flex-end" m={"0 10px"} >
                         <Button
                             //@ts-ignore
                             onClick={hide}
                             _focus={{ outline: "none" }}
                             color="gray.200"
                             variant="link"
-                            zIndex={2}
                             minW={0}
                         >
-                            <CloseIcon boxSize={4} />
+                            <CloseIcon width={"20px"} height={"20px"} />
                         </Button>
                     </Box>
                 }
-                <Box height={"100%"} flex={1} textAlign={textAlign} padding={"0 10px"}>
+                <Box height={"100%"} textAlign={textAlign} padding={"0 10px"}>
                     {React.Children.map(children, (child, index) => {
                         if (child && index === currentSlide) {
                             return (
@@ -83,15 +82,14 @@ const Slider = ({
                         }
                     })}
                 </Box>
-                <Flex width={"100%"} mx="auto">
+                <Flex width={"100%"} mx="auto" alignSelf={"flex-end"}>
                     <Button
                         onClick={handleDecrementClick}
                         color="gray.200"
                         _focus={{ outline: "none" }}
                         variant="link"
-                        minW={0}
                     >
-                        <ChevronLeftIcon boxSize={9} />
+                        <ChevronLeftIcon width={"24px"} height={"24px"} />
                     </Button>
                     {showProgress &&
                         <Box display={"flex"} width={"100%"} position={"relative"}>
@@ -121,10 +119,10 @@ const Slider = ({
                         zIndex={2}
                         minW={0}
                     >
-                        <ChevronRightIcon boxSize={9} />
+                        <ChevronRightIcon width={"24px"} height={"24px"} />
                     </Button>
                 </Flex>
-            </Flex>
+            </Grid>
         </Box>
     )
 };
