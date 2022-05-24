@@ -56,7 +56,7 @@ const Slider = ({
     }
     return (
         <Box minWidth={minWidth} minHeight={minHeight} maxHeight={maxHeight} maxWidth={maxWidth} backgroundColor={backgroundColor} borderRadius={"10px"}>
-            <Flex height={"100%"} direction={"column"}>
+            <Flex minHeight={"100%"} height={"100%"} direction={"column"}>
                 {hide &&
                     <Box alignSelf={"flex-end"} m={"0 10px"}>
                         <Button
