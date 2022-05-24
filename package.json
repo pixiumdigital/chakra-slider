@@ -1,7 +1,7 @@
 {
   "name": "@pixium-digital/chakra-slider",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@chakra-ui/icons": "^2.0.0",
     "@chakra-ui/react": "^2.1.0",
