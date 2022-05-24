@@ -31,9 +31,9 @@ export default [
         ],
         external: ["react", "react-dom", "styled-components", "@chakra-ui/icons", "@chakra-ui/react", "@emotion/react", "@emotion/styled"]
     },
-    // {
-    //     input: "dist/esm/types/index.d.ts",
-    //     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    //     plugins: [dts()],
-    // },
+    {
+        input: "dist/esm/types/index.d.ts",
+        output: [{ file: "dist/index.d.ts", format: "esm" }],
+        plugins: [dts()],
+    },
 ];
